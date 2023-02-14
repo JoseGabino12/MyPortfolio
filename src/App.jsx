@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import Contact from './components/Contact'
+import MyInfo from './components/MyInfo'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
   return (
-    <div className="App">
-      <h1 className='text-3xl font-bold underline'>probando</h1>
+    <div className='h-screen p-5'>
+      <MyInfo />
+      <Contact />
     </div>
   )
 }
