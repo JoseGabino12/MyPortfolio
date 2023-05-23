@@ -1,15 +1,14 @@
-import MyInfo from './components/MyInfo'
+import Presentation from './components/Presentation'
 import Contact from './components/Contact'
+import Scholarship from './components/Scholarship'
 
 const App = () => {
-
   return (
-    <div className='h-screen p-5'>
-      <div className="grid grid-rows-3 h-full">
-        <MyInfo />
-        <Contact />
-      </div>
-    </div>
+    <main className='bg-black text-white'>
+      <Presentation />
+      <Scholarship />
+      <Contact />
+    </main>
   )
 }
 
