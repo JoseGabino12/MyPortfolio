@@ -7,9 +7,15 @@ const Nav = () => {
         <a href='#home'>
           <h2>Home</h2>
         </a>
-        <h2>Education</h2>
-        <h2>Aditional education</h2>
-        <h2>Contact me</h2>
+        <a href='#education'>
+          <h2>Education</h2>
+        </a>
+        <a href='#aditional'>
+          <h2>Aditional education</h2>
+        </a>
+        <a href='#contact'>
+          <h2>Contact me</h2>
+        </a>
       </div>
 
       <div className='flex flex-row gap-5'>

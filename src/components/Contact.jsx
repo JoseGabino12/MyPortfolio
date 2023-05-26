@@ -1,21 +1,30 @@
+import { contactData } from '../data/Scholarship'
+import useAnimation from '../hooks/useAnimation'
+import { useEffect, useRef } from 'react'
+
 const Contact = () => {
+  const contactRef = useRef()
+
+  useEffect(() => {
+    useAnimation().observe(contactRef.current)
+  }, [])
+
   return (
-    <section className='p-5 pb-40 gap-5 flex flex-col items-center'>
+    <section id='contact' ref={contactRef} className='opacity-0 duration-1000 p-5 pb-40 gap-5 flex flex-col items-center'>
       <h1 className='font-bold text-5xl'>Contact me</h1>
       <h2>Do you want to contact me? Here are my contact details.</h2>
 
-      <div className='flex flex-row gap-4'>
-        <div className='backdrop-blur-md bg-white/30 p-3 rounded-md hover:cursor-pointer'>
-          <h2>gabinomorales1212@hotmail.com</h2>
-        </div>
+      <div className='flex flex-row gap-10'>
+        {
+          contactData.map((contact, index) => (
 
-        <div className='backdrop-blur-md bg-white/30 p-3 rounded-md hover:cursor-pointer'>
-          <h2>JoseGabino12</h2>
-        </div>
+            <a href={contact.link} target='_blank' key={index} className='backdrop-blur-md bg-white/30 p-3 flex items-center gap-2 rounded-md hover:cursor-pointer hover:scale-110' rel='noreferrer'>
+              <contact.icon />
+              <h2>{contact.data}</h2>
+            </a>
+          ))
+        }
 
-        <div className='backdrop-blur-md bg-white/30 p-3 rounded-md hover:cursor-pointer'>
-          <h2>Jose Gabino Morales González</h2>
-        </div>
       </div>
     </section>
   )

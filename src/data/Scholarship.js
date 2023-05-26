@@ -1,6 +1,18 @@
+import {
+  SiPhp,
+  SiCplusplus,
+  SiCsharp,
+  SiMysql,
+  SiPython,
+  SiTypescript,
+  SiReact,
+  SiGit,
+  SiGithub
+} from 'react-icons/si'
 import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io5'
-import { SiPhp, SiCplusplus, SiCsharp, SiMysql, SiPython, SiTypescript, SiReact, SiGit, SiGithub } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
+import { TfiEmail } from 'react-icons/tfi'
+import { BsLinkedin } from 'react-icons/bs'
 
 export const ScholarshipInfo = [
   {
@@ -116,5 +128,29 @@ export const experienceData = [
     date: 'From June 2022 to present',
     do: ['I am currently working on a web app for a company called Freeway. I am working with a team of 4 people', 'Designed and developed the website using React and TypeScript', 'I created the dashboard layout where I used the companys own API to manage data and control users', 'Assisted in connecting the frontend with the backend using TypeScript'],
     technologies: ['react', 'css', 'js', 'ts', 'git', 'github']
+  }
+]
+
+export const contactData = [
+  {
+    id: 'email',
+    name: 'Email',
+    data: 'gabinomorales1212@hotmail.com',
+    link: 'mailto:gabinomorales@hotmail.com',
+    icon: TfiEmail
+  },
+  {
+    id: 'github',
+    name: 'GitHub',
+    data: 'JoseGabino12',
+    link: 'https://github.com/JoseGabino12',
+    icon: SiGithub
+  },
+  {
+    id: 'linkedin',
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/gabinomorales/',
+    data: 'José Gabino Morales González',
+    icon: BsLinkedin
   }
 ]
