@@ -1,7 +1,7 @@
 import Presentation from './components/Presentation'
 import Nav from './components/Nav'
 import Scholarship from './components/Scholarship'
-import Experience from './components/Experience'
+import Experience from './components/Additional'
 import Contact from './components/Contact'
 
 const App = () => {

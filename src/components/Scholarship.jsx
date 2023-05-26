@@ -12,7 +12,7 @@ const Scholarship = () => {
   }, [scholarship])
 
   return (
-    <section className='flex flex-col justify-center gap-6 m-5 items-center opacity-0 duration-1000 blur-sm translate-x-full' ref={scolar}>
+    <section className='flex flex-col justify-center gap-6 m-5 items-center opacity-0 duration-1000 blur-sm' ref={scolar}>
       <h1 className='font-bold text-5xl'>Education</h1>
       <div className='flex flex-col md:flex-row gap-10'>
         {

@@ -11,7 +11,7 @@ const Presentation = () => {
   }, [observer])
 
   return (
-    <section className='gap-10 items-center p-5 flex flex-col sm:flex-row justify-center h-screen opacity-0 translate-x-full duration-1000' ref={pres}>
+    <section id='home' className='gap-10 items-center p-5 flex-col sm:flex-row justify-center h-screen opacity-0 duration-1000 flex' ref={pres}>
       <div>
         <img className='rounded-full w-60 h-60' src={Perfil} alt='José Gabino Morales González' />
       </div>
@@ -24,7 +24,6 @@ const Presentation = () => {
           I am a Software Engineering student, with a focus on Front-end technologies. I am enthusiastic about self-directed learning and have the ability to work effectively in a team.
         </p>
       </div>
-
     </section>
   )
 }
