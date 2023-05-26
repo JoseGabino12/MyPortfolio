@@ -11,7 +11,7 @@ const Presentation = () => {
   }, [observer])
 
   return (
-    <section className='gap-10 items-center p-5 flex flex-col sm:flex-row justify-center h-screen opacity-0 duration-1000' ref={pres}>
+    <section className='gap-10 items-center p-5 flex flex-col sm:flex-row justify-center h-screen opacity-0 translate-x-full duration-1000' ref={pres}>
       <div>
         <img className='rounded-full w-60 h-60' src={Perfil} alt='José Gabino Morales González' />
       </div>

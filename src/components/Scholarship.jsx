@@ -12,12 +12,12 @@ const Scholarship = () => {
   }, [scholarship])
 
   return (
-    <section className='m-5 opacity-0 duration-1000 blur-sm translate-x-full' ref={scolar}>
-      <h1>Scholarship</h1>
-      <div className='flex flex-row gap-10'>
+    <section className='flex flex-col justify-center gap-6 m-5 items-center opacity-0 duration-1000 blur-sm translate-x-full' ref={scolar}>
+      <h1 className='font-bold text-5xl'>Education</h1>
+      <div className='flex flex-col md:flex-row gap-10'>
         {
           ScholarshipInfo.map((scholarship, index) => (
-            <Card key={index} title={scholarship.title} campus={scholarship.campus} date={scholarship.date} technologies={scholarship.technologies} />
+            <Card key={index} title={scholarship.title} campus={scholarship.campus} date={scholarship.date} technologies={scholarship.technologies} learned={scholarship.do} />
           ))
         }
       </div>

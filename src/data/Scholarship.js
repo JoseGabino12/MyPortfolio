@@ -1,5 +1,5 @@
 import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io5'
-import { SiPhp, SiCplusplus, SiCsharp, SiMysql, SiPython, SiTypescript, SiReact } from 'react-icons/si'
+import { SiPhp, SiCplusplus, SiCsharp, SiMysql, SiPython, SiTypescript, SiReact, SiGit, SiGithub } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
 
 export const ScholarshipInfo = [
@@ -7,6 +7,7 @@ export const ScholarshipInfo = [
     title: 'Technical Baccalaurate #16 - Technician Analyst Programmer',
     campus: 'Villa de Álvarez cmapus, University of Colima',
     date: 'From June 2016 to June 2019',
+    do: ['I learned the basics of programming', 'I did my first projects in C++ and C#', 'I also learned the basics of web development with PHP, HTML and CSS', 'I also learned the basics of databases with MySQL.'],
     technologies: ['css', 'js', 'php', 'cplusplus', 'csharp']
 
   },
@@ -14,7 +15,8 @@ export const ScholarshipInfo = [
     title: 'Faculty of Telematics - Software Engineering',
     campus: 'Main campus, University of Colima',
     date: 'From August 2019 to present',
-    technologies: ['css', 'js', 'ts', 'python', 'sql', 'react', 'reactnative', 'php', 'cplusplus', 'csharp']
+    do: ['I have learned the basics of web development with React', 'I have learned the basics of mobile development with React Native', 'I have learned the basics of databases with MySQL and MongoDB', 'I have learned the basics of backend development with NodeJS and ExpressJS.'],
+    technologies: ['css', 'js', 'ts', 'python', 'sql', 'react', 'reactnative', 'php', 'cplusplus', 'csharp', 'git', 'github']
   }
 ]
 
@@ -78,5 +80,41 @@ export const technologiesInfo = [
     name: 'React Native',
     icon: TbBrandReactNative,
     color: 'text-[#61dafb]'
+  },
+  {
+    id: 'git',
+    name: 'Git',
+    icon: SiGit,
+    color: 'text-[#f34f29]'
+  },
+  {
+    id: 'github',
+    name: 'GitHub',
+    icon: SiGithub,
+    color: 'text-[#000000]'
+  }
+]
+
+export const experienceData = [
+  {
+    title: 'Next U Workshop - Web Development',
+    campus: 'Online',
+    date: 'From Agust 2021 to December 2018',
+    do: ['I learned the basics of web development', 'I created a page using the Google API where you had to search for a place, and it would display the map of that location with images', 'I also made a cryptocurrency wallet with Python, where I stored each transaction in a notepad.'],
+    technologies: ['react', 'css', 'js', 'ts', 'python', 'sql', 'git', 'github']
+  },
+  {
+    title: 'Udemy Workshop - React from zero to expert',
+    campus: 'Online',
+    do: ['I created my first React pages, starting from the "Hello world"', 'I created a meme app where I made requests to an API to fetch memes related to a search term', 'I also created custom hooks and utilized Reacts state and effect features.'],
+    date: 'From July 2022 to December 2022',
+    technologies: ['react', 'css', 'js', 'ts', 'git', 'github']
+  },
+  {
+    title: 'Freeway Project - Web App',
+    campus: 'Online',
+    date: 'From June 2022 to present',
+    do: ['I am currently working on a web app for a company called Freeway. I am working with a team of 4 people', 'Designed and developed the website using React and TypeScript', 'I created the dashboard layout where I used the companys own API to manage data and control users', 'Assisted in connecting the frontend with the backend using TypeScript'],
+    technologies: ['react', 'css', 'js', 'ts', 'git', 'github']
   }
 ]

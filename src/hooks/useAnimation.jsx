@@ -14,8 +14,6 @@ const useAnimation = () => {
     })
   })
 
-  console.log(observer)
-
   return observer
 }
 
