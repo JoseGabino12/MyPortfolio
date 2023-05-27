@@ -2,7 +2,7 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs'
 
 const Nav = () => {
   return (
-    <section className='w-full flex justify-between z-10 content-end gap-5 p-5 fixed bg-gradient-to-r to-[#CC9EA2] from-[#110C3A] mb-10'>
+    <section className='w-full justify-between z-10 content-end gap-5 p-5 fixed bg-gradient-to-r to-[#CC9EA2] from-[#110C3A] mb-10 hidden sm:flex'>
       <div className='flex flex-row gap-3'>
         <a href='#home'>
           <h2>Home</h2>

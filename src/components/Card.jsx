@@ -4,7 +4,7 @@ const Card = ({ title, campus, date, technologies, learned }) => {
   const technologiesIcons = technologiesInfo.filter(tech => technologies.includes(tech.id))
 
   return (
-    <div className='flex flex-col gap-4 w-full backdrop-blur-md bg-white/30 drop-shadow-xl p-5 rounded-md font-serif'>
+    <div className='flex flex-col gap-4 backdrop-blur-md bg-white/30 drop-shadow-xl p-5 rounded-md font-serif'>
       <div>
         <h1 className='font-bold text-xl'>{title}</h1>
         <h2 className='italic'>{campus}</h2>
