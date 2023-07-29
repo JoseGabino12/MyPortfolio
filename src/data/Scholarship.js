@@ -13,6 +13,10 @@ import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io5'
 import { TbBrandReactNative } from 'react-icons/tb'
 import { TfiEmail } from 'react-icons/tfi'
 import { BsLinkedin } from 'react-icons/bs'
+import { AiTwotoneHome } from 'react-icons/ai'
+import { FaUserGraduate } from 'react-icons/fa'
+import { IoIosRocket } from 'react-icons/io'
+import { MdEmail } from 'react-icons/md'
 
 export const ScholarshipInfo = [
   {
@@ -152,5 +156,24 @@ export const contactData = [
     link: 'https://www.linkedin.com/in/gabinomorales/',
     data: 'José Gabino Morales González',
     icon: BsLinkedin
+  }
+]
+
+export const sections = [
+  {
+    name: 'home',
+    icon: AiTwotoneHome
+  },
+  {
+    name: 'education',
+    icon: FaUserGraduate
+  },
+  {
+    name: 'aditional',
+    icon: IoIosRocket
+  },
+  {
+    name: 'contact',
+    icon: MdEmail
   }
 ]

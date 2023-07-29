@@ -4,14 +4,24 @@ import Scholarship from './components/Scholarship'
 import Experience from './components/Additional'
 import Contact from './components/Contact'
 
+import { useScrollPosition } from './hooks/useScrollPosition'
+
 const App = () => {
+  const scrollPosition = useScrollPosition()
+
+  // Calculate the percentage of scroll position for the gradient
+  const gradientPosition = (scrollPosition / (document.body.scrollHeight - window.innerHeight)) * 100
+
   return (
-    <main className='bg-gradient-to-r from-[#110c3a] to-[#cc9ea2] text-white bg-origin-border'>
-      <Nav />
-      <Presentation />
-      <Scholarship />
-      <Experience />
-      <Contact />
+    <main className='text-white'>
+
+      <div className='snap-mandatory snap-x flex flex-col' style={{ background: `linear-gradient(${gradientPosition}deg, #110c3a 0%, #cc9ea2)` }}>
+        <Nav />
+        <Presentation />
+        <Scholarship />
+        <Experience />
+        <Contact />
+      </div>
     </main>
   )
 }

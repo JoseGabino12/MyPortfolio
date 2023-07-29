@@ -1,37 +1,28 @@
-import { BsLinkedin, BsGithub } from 'react-icons/bs'
+import { sections } from '../data/Scholarship'
+import { useCurrentSection } from '../hooks/useCurrentSection'
 
 const Nav = () => {
+  const activeSection = useCurrentSection()
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className='w-full justify-between z-10 content-end gap-5 p-5 fixed bg-gradient-to-r to-[#CC9EA2] from-[#110C3A] mb-10 hidden sm:flex'>
-      <div className='flex flex-row gap-3'>
-        <a href='#home'>
-          <h2>Home</h2>
-        </a>
-        <a href='#education'>
-          <h2>Education</h2>
-        </a>
-        <a href='#aditional'>
-          <h2>Aditional education</h2>
-        </a>
-        <a href='#contact'>
-          <h2>Contact me</h2>
-        </a>
-      </div>
-
-      <div className='flex flex-row gap-5'>
-        <a href='https://www.linkedin.com/in/gabinomorales/' target='_blank' rel='noreferrer'>
-          <h3 className='font-mono font-light italic flex items-center'>
-            <BsLinkedin className='mr-2 text-Linkedin' />
-            José Gabino Morales González
-          </h3>
-        </a>
-
-        <a href='https://github.com/JoseGabino12' target='_blank' rel='noreferrer'>
-          <h3 className='font-mono font-light italic flex items-center'>
-            <BsGithub className='mr-2 ' />
-            JoseGabino12
-          </h3>
-        </a>
+    <section className='w-full flex justify-center'>
+      <div className='flex-row flex bottom-0 gap-4 justify-around z-10 p-5 fixed rounded-t-lg backdrop-blur-md bg-white/30 sm:mb-10 sm:rounded-b-lg sm:bottom-auto text-black'>
+        {
+          sections.map((section, index) => (
+            <a key={index} href={`#${section.name}`} onClick={() => scrollToSection(section)} className={activeSection === section && 'text-white'}>
+              <h3 className='font-mono font-semibold italic capitalize hover:scale-110'>
+                <section.icon className='text-2xl' />
+              </h3>
+            </a>
+          ))
+        }
       </div>
     </section>
   )
