@@ -1,6 +1,8 @@
 import { contactData } from '../data/Scholarship'
-import useAnimation from '../hooks/useAnimation'
 import { useEffect, useRef } from 'react'
+
+import useAnimation from '../hooks/useAnimation'
+import ChatBot from './Chatbot'
 
 const Contact = () => {
   const contactRef = useRef()
@@ -24,8 +26,9 @@ const Contact = () => {
             </a>
           ))
         }
-
       </div>
+
+      <ChatBot />
     </section>
   )
 }
