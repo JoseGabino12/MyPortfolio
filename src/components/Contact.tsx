@@ -11,6 +11,7 @@ const Contact = () => {
           infoContactData.map((contact, index) => (
 
             <a href={contact.link} target='_blank' key={index} className='backdrop-blur-md bg-white/30 p-3 flex items-center gap-2 rounded-md hover:cursor-pointer hover:scale-110' rel='noreferrer'>
+              <contact.icon />
               <h2>{contact.data}</h2>
             </a>
           ))

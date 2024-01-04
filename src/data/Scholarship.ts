@@ -6,8 +6,7 @@ import type {
 } from '../types/types'
 
 import { TfiEmail } from 'react-icons/tfi'
-import { AiTwotoneHome } from 'react-icons/ai'
-import { FaUserGraduate } from 'react-icons/fa'
+import { FaUserGraduate, FaGithub, FaLinkedin, FaHome } from 'react-icons/fa'
 import { IoIosRocket } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 
@@ -163,21 +162,21 @@ export const infoContactData: contactData[] = [
     name: 'GitHub',
     data: 'JoseGabino12',
     link: 'https://github.com/JoseGabino12',
-    icon: GitHubIcon
+    icon: FaGithub
   },
   {
     id: 'linkedin',
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/gabinomorales/',
     data: 'José Gabino Morales González',
-    icon: LinkedinIcon
+    icon: FaLinkedin
   }
 ]
 
 export const sections: sectionsInterface[] = [
   {
     name: 'home',
-    icon: AiTwotoneHome
+    icon: FaHome
   },
   {
     name: 'experience',
