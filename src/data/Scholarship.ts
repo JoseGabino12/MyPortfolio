@@ -19,7 +19,6 @@ import {
   GitIcon,
   GitHubIcon,
   NextJSIcon,
-  LinkedinIcon,
   PythonIcon,
   SqlIcon,
   ReactIcon,
