@@ -11,8 +11,12 @@ const Presentation = () => {
         <h3 className='font-mono font-light italic'>Software Engineer</h3>
         <h1 className='text-4xl sm:text-5xl'>José Gabino</h1>
         <h1 className='text-4xl sm:text-5xl'>Morales González</h1>
-        <p className='text-center sm:text-justify mt-5 tracking-wide'>
-          I am a Software Engineering student, with a focus on Front-end technologies. I am enthusiastic about self-directed learning and have the ability to work effectively in a team.
+        <p className='mt-5 tracking-wide'>
+          Passionate software engineer with a focus on development, specializing in frontend engineering. 
+        </p>
+        <p>
+          Recently graduated, I have one year of experience as a frontend developer, during which I played a crucial role in designing and implementing innovative technological solutions, demonstrating a strong interest in all aspects of software development. 
+          
         </p>
       </div>
       
