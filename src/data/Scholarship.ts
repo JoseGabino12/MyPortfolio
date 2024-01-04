@@ -49,79 +49,79 @@ export const technologiesInfo: tecnologies[] = [
   {
     id: 'css',
     name: 'CSS',
-    color: 'text-[#007bff]',
+    color: 'bg-[#007bff]/50',
     icon: CssIcon
   },
   {
     id: 'js',
     name: 'JavaScript',
-    color: 'text-[#f7df1e]',
+    color: 'bg-[#f7df1e]/50',
     icon: JavaScriptIcon
   },
   {
     id: 'ts',
     name: 'TypeScript',
-    color: 'text-[#007acc]',
+    color: 'bg-[#007acc]/50',
     icon: TypeScriptIcon
   },
   {
     id: 'php',
     name: 'PHP',
-    color: 'text-[#4f5d95]',
+    color: 'bg-[#4f5d95]/50',
     icon: PhpIcon
   },
   {
     id: 'cplusplus',
     name: 'C++',
-    color: 'text-[#61b267]',
+    color: 'bg-[#61b267]/50',
     icon: CpIcon
   },
   {
     id: 'csharp',
     name: 'C#',
-    color: 'text-[#68217a]',
+    color: 'bg-[#68217a]/50',
     icon: CsharpIcon
   },
   {
     id: 'python',
     name: 'Python',
-    color: 'text-[#ffd43b]',
+    color: 'bg-[#ffd43b]/50',
     icon: PythonIcon
   },
   {
     id: 'sql',
     name: 'SQL',
-    color: 'text-[#336791]',
+    color: 'bg-[#336791]/50',
     icon: SqlIcon
   },
   {
     id: 'react',
     name: 'React',
-    color: 'text-[#61dafb]',
+    color: 'bg-[#61dafb]/50',
     icon: ReactIcon
   },
   {
     id: 'reactnative',
     name: 'React Native',
-    color: 'text-[#61dafb]',
+    color: 'bg-[#61dafb]/50',
     icon: ReactIcon
   },
   {
     id: 'git',
     name: 'Git',
-    color: 'text-[#f34f29]',
+    color: 'bg-[#f34f29]/50',
     icon: GitIcon
   },
   {
     id: 'github',
     name: 'GitHub',
-    color: 'text-[#000000]',
+    color: 'bg-[#000000]/50',
     icon: GitHubIcon
   },
   {
     id: 'nextjs',
     name: 'NextJS',
-    color: 'text-[#000000]',
+    color: 'bg-[#000000]/50',
     icon: NextJSIcon
   }
 ]

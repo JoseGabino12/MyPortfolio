@@ -1,8 +1,9 @@
 import { technologiesInfo } from '../data/Scholarship'
 import type { CardProps } from '../types/types'
+import Badge from './Badge'
 
 const Card = ({ title, campus, date, technologies, learned } : CardProps) => {  
-  // const technologiesIcons = technologiesInfo.filter(tech => technologies.includes(tech.id))
+  const technologiesIcons = technologiesInfo.filter(tech => technologies.includes(tech.id))
 
   return (
     <div className='flex flex-col gap-4 backdrop-blur-md bg-white/30 drop-shadow-xl p-5 rounded-md font-serif'>
@@ -20,6 +21,16 @@ const Card = ({ title, campus, date, technologies, learned } : CardProps) => {
             <ul key={item} className='list-disc ml-3'>
               <li>{item}</li>
             </ul>
+          )
+        })
+        }
+      </div>
+
+      <div className='flex flex-wrap items-center gap-5'>
+        {
+        technologiesIcons.map((tech) => {
+          return (
+            <Badge key={tech.id} text={tech.name} className={tech.color} icon={tech.icon} />
           )
         })
         }
