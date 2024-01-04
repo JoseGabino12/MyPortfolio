@@ -5,6 +5,28 @@ import type {
   sectionsInterface
 } from '../types/types'
 
+import { TfiEmail } from 'react-icons/tfi'
+import { AiTwotoneHome } from 'react-icons/ai'
+import { FaUserGraduate } from 'react-icons/fa'
+import { IoIosRocket } from 'react-icons/io'
+import { MdEmail } from 'react-icons/md'
+
+import {
+  CssIcon,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  PhpIcon,
+  CsharpIcon,
+  GitIcon,
+  GitHubIcon,
+  NextJSIcon,
+  LinkedinIcon,
+  PythonIcon,
+  SqlIcon,
+  ReactIcon,
+  CpIcon,
+} from '../assets/icons'
+
 export const ScholarshipInfo: infoData[] = [
   {
     title: 'Technical Baccalaurate #16 - Technician Analyst Programmer',
@@ -27,62 +49,80 @@ export const technologiesInfo: tecnologies[] = [
   {
     id: 'css',
     name: 'CSS',
-    color: 'text-[#007bff]'
+    color: 'text-[#007bff]',
+    icon: CssIcon
   },
   {
     id: 'js',
     name: 'JavaScript',
-    color: 'text-[#f7df1e]'
+    color: 'text-[#f7df1e]',
+    icon: JavaScriptIcon
   },
   {
     id: 'ts',
     name: 'TypeScript',
-    color: 'text-[#007acc]'
+    color: 'text-[#007acc]',
+    icon: TypeScriptIcon
   },
   {
     id: 'php',
     name: 'PHP',
-    color: 'text-[#4f5d95]'
+    color: 'text-[#4f5d95]',
+    icon: PhpIcon
   },
   {
     id: 'cplusplus',
     name: 'C++',
-    color: 'text-[#61b267]'
+    color: 'text-[#61b267]',
+    icon: CpIcon
   },
   {
     id: 'csharp',
     name: 'C#',
-    color: 'text-[#68217a]'
+    color: 'text-[#68217a]',
+    icon: CsharpIcon
   },
   {
     id: 'python',
     name: 'Python',
-    color: 'text-[#ffd43b]'
+    color: 'text-[#ffd43b]',
+    icon: PythonIcon
   },
   {
     id: 'sql',
     name: 'SQL',
-    color: 'text-[#336791]'
+    color: 'text-[#336791]',
+    icon: SqlIcon
   },
   {
     id: 'react',
     name: 'React',
-    color: 'text-[#61dafb]'
+    color: 'text-[#61dafb]',
+    icon: ReactIcon
   },
   {
     id: 'reactnative',
     name: 'React Native',
-    color: 'text-[#61dafb]'
+    color: 'text-[#61dafb]',
+    icon: ReactIcon
   },
   {
     id: 'git',
     name: 'Git',
-    color: 'text-[#f34f29]'
+    color: 'text-[#f34f29]',
+    icon: GitIcon
   },
   {
     id: 'github',
     name: 'GitHub',
-    color: 'text-[#000000]'
+    color: 'text-[#000000]',
+    icon: GitHubIcon
+  },
+  {
+    id: 'nextjs',
+    name: 'NextJS',
+    color: 'text-[#000000]',
+    icon: NextJSIcon
   }
 ]
 
@@ -116,32 +156,39 @@ export const infoContactData: contactData[] = [
     name: 'Email',
     data: 'gabinomorales1212@hotmail.com',
     link: 'mailto:gabinomorales@hotmail.com',
+    icon: MdEmail
   },
   {
     id: 'github',
     name: 'GitHub',
     data: 'JoseGabino12',
     link: 'https://github.com/JoseGabino12',
+    icon: GitHubIcon
   },
   {
     id: 'linkedin',
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/gabinomorales/',
     data: 'José Gabino Morales González',
+    icon: LinkedinIcon
   }
 ]
 
 export const sections: sectionsInterface[] = [
   {
     name: 'home',
+    icon: AiTwotoneHome
+  },
+  {
+    name: 'experience',
+    icon: IoIosRocket
   },
   {
     name: 'education',
-  },
-  {
-    name: 'aditional',
+    icon: FaUserGraduate
   },
   {
     name: 'contact',
+    icon: TfiEmail
   }
 ]

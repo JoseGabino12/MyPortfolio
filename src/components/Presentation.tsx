@@ -15,6 +15,7 @@ const Presentation = () => {
           I am a Software Engineering student, with a focus on Front-end technologies. I am enthusiastic about self-directed learning and have the ability to work effectively in a team.
         </p>
       </div>
+      
     </section>
   )
 }
