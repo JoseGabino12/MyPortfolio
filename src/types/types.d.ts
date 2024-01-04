@@ -1,5 +1,6 @@
 export type infoData = {
   title: string,
+  img: any,
   campus: string,
   date: string,
   do: Array<string>,
@@ -28,6 +29,7 @@ export interface sectionsInterface {
 
 export interface CardProps {
   title: string,
+  img: any,
   campus: string,
   date: string,
   technologies: string[],
