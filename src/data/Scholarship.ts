@@ -1,24 +1,31 @@
-import {
-  SiPhp,
-  SiCplusplus,
-  SiCsharp,
-  SiMysql,
-  SiPython,
-  SiTypescript,
-  SiReact,
-  SiGit,
-  SiGithub
-} from 'react-icons/si'
-import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io5'
-import { TbBrandReactNative } from 'react-icons/tb'
+import type { 
+  infoData,
+  contactData,
+  tecnologies,
+  sectionsInterface
+} from '../types/types'
+
 import { TfiEmail } from 'react-icons/tfi'
-import { BsLinkedin } from 'react-icons/bs'
-import { AiTwotoneHome } from 'react-icons/ai'
-import { FaUserGraduate } from 'react-icons/fa'
+import { FaUserGraduate, FaGithub, FaLinkedin, FaHome } from 'react-icons/fa'
 import { IoIosRocket } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 
-export const ScholarshipInfo = [
+import {
+  CssIcon,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  PhpIcon,
+  CsharpIcon,
+  GitIcon,
+  GitHubIcon,
+  NextJSIcon,
+  PythonIcon,
+  SqlIcon,
+  ReactIcon,
+  CpIcon,
+} from '../assets/icons'
+
+export const ScholarshipInfo: infoData[] = [
   {
     title: 'Technical Baccalaurate #16 - Technician Analyst Programmer',
     campus: 'Villa de Álvarez cmapus, University of Colima',
@@ -36,82 +43,88 @@ export const ScholarshipInfo = [
   }
 ]
 
-export const technologiesInfo = [
+export const technologiesInfo: tecnologies[] = [
   {
     id: 'css',
     name: 'CSS',
-    icon: IoLogoCss3,
-    color: 'text-[#007bff]'
+    color: 'bg-[#007bff]/50',
+    icon: CssIcon
   },
   {
     id: 'js',
     name: 'JavaScript',
-    icon: IoLogoJavascript,
-    color: 'text-[#f7df1e]'
+    color: 'bg-[#f7df1e]/50',
+    icon: JavaScriptIcon
   },
   {
     id: 'ts',
     name: 'TypeScript',
-    icon: SiTypescript,
-    color: 'text-[#007acc]'
+    color: 'bg-[#007acc]/50',
+    icon: TypeScriptIcon
   },
   {
     id: 'php',
     name: 'PHP',
-    icon: SiPhp,
-    color: 'text-[#4f5d95]'
+    color: 'bg-[#4f5d95]/50',
+    icon: PhpIcon
   },
   {
     id: 'cplusplus',
     name: 'C++',
-    icon: SiCplusplus,
-    color: 'text-[#61b267]'
+    color: 'bg-[#61b267]/50',
+    icon: CpIcon
   },
   {
     id: 'csharp',
     name: 'C#',
-    icon: SiCsharp,
-    color: 'text-[#68217a]'
+    color: 'bg-[#68217a]/50',
+    icon: CsharpIcon
   },
   {
     id: 'python',
     name: 'Python',
-    icon: SiPython,
-    color: 'text-[#ffd43b]'
+    color: 'bg-[#ffd43b]/50',
+    icon: PythonIcon
   },
   {
     id: 'sql',
     name: 'SQL',
-    icon: SiMysql,
-    color: 'text-[#336791]'
+    color: 'bg-[#336791]/50',
+    icon: SqlIcon
   },
   {
     id: 'react',
     name: 'React',
-    icon: SiReact,
-    color: 'text-[#61dafb]'
+    color: 'bg-[#61dafb]/50',
+    icon: ReactIcon
   },
   {
     id: 'reactnative',
     name: 'React Native',
-    icon: TbBrandReactNative,
-    color: 'text-[#61dafb]'
+    color: 'bg-[#61dafb]/50',
+    icon: ReactIcon
   },
   {
     id: 'git',
     name: 'Git',
-    icon: SiGit,
-    color: 'text-[#f34f29]'
+    color: 'bg-[#f34f29]/50',
+    icon: GitIcon
   },
   {
     id: 'github',
     name: 'GitHub',
-    icon: SiGithub,
-    color: 'text-[#000000]'
+    color: 'bg-[#000000]/50',
+    icon: GitHubIcon
+  },
+  {
+    id: 'nextjs',
+    name: 'NextJS',
+    color: 'bg-[#000000]/50',
+    icon: NextJSIcon
   }
 ]
 
-export const experienceData = [
+export const experienceData: infoData[] = [
   {
     title: 'Next U Workshop - Web Development',
     campus: 'Online',
@@ -135,45 +148,45 @@ export const experienceData = [
   }
 ]
 
-export const contactData = [
+export const infoContactData: contactData[] = [
   {
     id: 'email',
     name: 'Email',
     data: 'gabinomorales1212@hotmail.com',
     link: 'mailto:gabinomorales@hotmail.com',
-    icon: TfiEmail
+    icon: MdEmail
   },
   {
     id: 'github',
     name: 'GitHub',
     data: 'JoseGabino12',
     link: 'https://github.com/JoseGabino12',
-    icon: SiGithub
+    icon: FaGithub
   },
   {
     id: 'linkedin',
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/gabinomorales/',
     data: 'José Gabino Morales González',
-    icon: BsLinkedin
+    icon: FaLinkedin
   }
 ]
 
-export const sections = [
+export const sections: sectionsInterface[] = [
   {
     name: 'home',
-    icon: AiTwotoneHome
+    icon: FaHome
+  },
+  {
+    name: 'experience',
+    icon: IoIosRocket
   },
   {
     name: 'education',
     icon: FaUserGraduate
   },
   {
-    name: 'aditional',
-    icon: IoIosRocket
-  },
-  {
     name: 'contact',
-    icon: MdEmail
+    icon: TfiEmail
   }
 ]

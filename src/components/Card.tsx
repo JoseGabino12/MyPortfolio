@@ -1,6 +1,8 @@
 import { technologiesInfo } from '../data/Scholarship'
+import type { CardProps } from '../types/types'
+import Badge from './Badge'
 
-const Card = ({ title, campus, date, technologies, learned }) => {
+const Card = ({ title, campus, date, technologies, learned } : CardProps) => {  
   const technologiesIcons = technologiesInfo.filter(tech => technologies.includes(tech.id))
 
   return (
@@ -24,15 +26,14 @@ const Card = ({ title, campus, date, technologies, learned }) => {
         }
       </div>
 
-      <div>
-        <h1 className='font-semibold'>Applied Technologies</h1>
-        <div className='flex flex-row gap-2 text-2xl mt-2'>
-          {
-          technologiesIcons.map((tec, index) => (
-            <tec.icon key={index} className={tec.color} />
-          ))
+      <div className='flex flex-wrap items-center gap-5'>
+        {
+        technologiesIcons.map((tech) => {
+          return (
+            <Badge key={tech.id} text={tech.name} className={tech.color} icon={tech.icon} />
+          )
+        })
         }
-        </div>
       </div>
     </div>
   )
