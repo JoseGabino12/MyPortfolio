@@ -46,7 +46,7 @@ export const ScholarshipInfo: infoData[] = [
     title: 'Faculty of Telematics - Software Engineering',
     img: Udc.src,
     campus: 'Main campus, University of Colima',
-    date: 'From August 2019 to present',
+    date: 'From August 2019 to Agust 2023',
     do: ['I have acquired a foundational understanding of web development using React.', 'I possess fundamental knowledge of mobile development using React Native.', 'I have gained proficiency in working with databases through exposure to MySQL and MongoDB.', 'I have familiarized myself with the fundamentals of backend development utilizing NodeJS and ExpressJS.'],
     technologies: ['css', 'js', 'ts', 'python', 'sql', 'react', 'reactnative', 'php', 'cplusplus', 'csharp', 'git', 'github']
   }
@@ -159,7 +159,7 @@ export const experienceData: infoData[] = [
     img: Roboyo.src,
     campus: 'Colima, Villa de Álvarez',
     do: ['Developed a robot dedicated to conducting primary searches on COVID-related topics, with a focus on a specified state. The robot extracts relevant information and seamlessly dispatches it via email.', 'Designed a robot with the task of managing information in Excel efficiently. The robot is programmed to execute basic actions based on instructions, autonomously modifying information to streamline data management processes.', 'Crafted a specialized robot responsible for conducting detailed COVID-related research tailored to a specific state. This automated system efficiently extracts pertinent information and dispatches it via email for swift dissemination.', 'Engineered a robot with the capability to proficiently manage information within Excel. Following explicit instructions, the robot autonomously performs basic actions, ensuring seamless modifications to enhance data management workflows.',  'Developed a state-specific robot for comprehensive COVID research, ensuring thorough exploration of relevant topics. The extracted information is systematically transmitted via email, showcasing a seamless and automated dissemination process.'],
-    date: 'From July 2022 - in progress',
+    date: 'From January 2023 - July 2023',
     technologies: ['js', 'css', 'csharp', 'git', 'github']
   },
   {

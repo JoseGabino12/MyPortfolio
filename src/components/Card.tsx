@@ -7,15 +7,15 @@ const Card = ({ title, img, campus, date, technologies, learned } : CardProps) =
   const technologiesIcons = technologiesInfo.filter(tech => technologies.includes(tech.id))
 
   return (
-    <div className='flex border-s border-gray-200 gap-10 pt-10'>
+    <div className='block sm:flex border-s border-gray-200 gap-10 pt-10'>
       <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700" />
       
       <div className='flex flex-col gap-5 mb-10 ms-4'>
-        <time className='italic'>{date}</time>
+        <time dateTime={date} className='text-gray-300 italic'>{date}</time>
         <img src={img} alt={img} className='w-60 h-60 rounded-md' />
       </div>
 
-      <div className='max-w-4xl flex flex-col gap-3 '>
+      <div className='max-w-4xl flex flex-col gap-3 ms-4 sm:ms-0'>
         <h1 className='font-bold text-xl'>{title}</h1>
         <h2 className='italic'>{campus}</h2>
 
