@@ -3,19 +3,21 @@ import Card from './Card'
 
 const Scholarship = () => {
   return (
-    <section id='education' className='p-20 gap-5 flex flex-col items-center'>
+    <section id='education' className='p-5 sm:p-20 gap-5 flex flex-col items-center section-title'>
       <h1 className='font-bold text-4xl sm:text-5xl'>Education</h1>
+
       <ol className='relative border-s border-gray-200 ml-3'>
         {
           ScholarshipInfo.map((scholarship, index) => (
             <Card
               key={index}
               img={scholarship.img}
+              description={scholarship.description}
               title={scholarship.title}
               campus={scholarship.campus}
               date={scholarship.date}
               technologies={scholarship.technologies}
-              learned={scholarship.do}
+              root={`scholarship/${scholarship.id}`}
             />
           ))
         }

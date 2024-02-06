@@ -2,7 +2,7 @@ import perfil from '../assets/img/perfil.jpg'
 
 const Presentation = () => {
   return (
-    <section id='home' className='text-center sm:text-start gap-10 items-center p-5 flex-col sm:flex-row justify-center sm:h-screen flex'>
+    <section id='home' className='text-center sm:text-start gap-10 items-center p-5 flex-col sm:flex-row justify-center sm:h-screen flex section-title'>
       <div>
         <img className='rounded-full w-60 h-60' src={perfil.src} alt='José Gabino Morales González' />
       </div>
