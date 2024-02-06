@@ -10,7 +10,7 @@ const Nav: React.FC = () => {
   const [hoveredSection, setHoveredSection] = useState<number | null>(null);
 
   return (
-    <section className='w-full flex justify-center'>
+    <nav className='w-full flex justify-center'>
       <div className='flex-row flex bottom-0 gap-4 justify-around z-10 p-5 fixed rounded-t-lg backdrop-blur-md bg-white/30 sm:mb-10 sm:rounded-b-lg sm:bottom-auto'>
         {sections.map((section: Section, index: number) => (
           <a
@@ -28,7 +28,7 @@ const Nav: React.FC = () => {
           </a>
         ))}
       </div>
-    </section>
+    </nav>
   );
 };
 

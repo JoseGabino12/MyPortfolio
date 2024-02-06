@@ -1,9 +1,16 @@
+export type doData = {
+  subtitle: string,
+  description: string
+}
+
 export type infoData = {
+  id: string,
   title: string,
   img: any,
   campus: string,
   date: string,
-  do: Array<string>,
+  description: string,
+  do: Array<doData>,
   technologies: Array<string>
 }
 
@@ -20,18 +27,4 @@ export type tecnologies = {
   name: string,
   color: string,
   icon?: any
-}
-
-export interface sectionsInterface {
-  name: string,
-  icon: any,
-}
-
-export interface CardProps {
-  title: string,
-  img: any,
-  campus: string,
-  date: string,
-  technologies: string[],
-  learned: string[]
 }

@@ -3,7 +3,7 @@ import Card from './Card'
 
 const Experience = () => {
   return (
-    <section id='experience' className='p-20 gap-5 flex flex-col items-center'>
+    <section id='experience' className='p-5 sm:p-20 gap-5 flex flex-col items-center section-title'>
       <h1 className='font-bold text-center text-4xl sm:text-5xl'>Experience</h1>
       <ol className='relative border-s border-gray-200 ml-3'>
         {
@@ -11,11 +11,12 @@ const Experience = () => {
             <Card
               key={index}
               img={experience.img}
+              description={experience.description}
               title={experience.title}
               campus={experience.campus}
               date={experience.date}
               technologies={experience.technologies}
-              learned={experience.do}
+              root={`experience/${experience.id}`}
             />
           ))
         }

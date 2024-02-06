@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
 	title: string;
 }
@@ -12,23 +14,149 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="background-main">
 		<slot />
 	</body>
 </html>
 	
-<style>
+<style is:global>
 	.background-main {
 		color: white;
-		background: linear-gradient(100deg, #110c3a 0%, #cc9ea2);
+		background: linear-gradient(100deg, #cc9ea2 0%, #67254D);
+
+		/* background-color: #282936; */
 	}
 
 	html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
   }
+
+	.color-span {
+		color: white;
+	}
+
+	.button-view {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		background: transparent;
+		padding: 0;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	.button-view.learn-more {
+		width: 12rem;
+		height: auto;
+	}
+
+	.button-view.learn-more .circle {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: relative;
+		display: block;
+		margin: 0;
+		width: 3rem;
+		height: 3rem;
+		background: #282936;
+		border-radius: 1.625rem;
+	}
+
+	.button-view.learn-more .circle .icon {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: #fff;
+	}
+
+	.button-view.learn-more .circle .icon.arrow {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		left: 0.625rem;
+		width: 1.125rem;
+		height: 0.125rem;
+		background: none;
+	}
+
+	.button-view.learn-more .circle .icon.arrow::before {
+		position: absolute;
+		content: "";
+		top: -0.29rem;
+		right: 0.0625rem;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-top: 0.125rem solid #fff;
+		border-right: 0.125rem solid #fff;
+		transform: rotate(45deg);
+	}
+
+	.button-view.learn-more .button-text {
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75rem 0;
+		margin: 0 0 0 1.85rem;
+		color: #fff;
+		font-weight: 700;
+		line-height: 1.6;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.button-view:hover .circle {
+		width: 100%;
+	}
+
+	.button-view:hover .circle .icon.arrow {
+		background: #fff;
+		transform: translate(1rem, 0);
+	}
+
+	.button-view:hover .button-text {
+		color: #fff;
+		margin-left: 40px;
+	}
+
+	.section-title {
+		animation: reveal linear both;
+		animation-timeline: view();
+		animation-range: entry 10% cover 20%;
+	}
+
+	@keyframes reveal {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@media screen and (min-width: 1024px){
+		.background-main {
+			height: 100%;
+			color: white;
+			background: linear-gradient(100deg, #cc9ea2 0%, #67254D);
+		}
+	}
+
+	@media screen and (min-width: 2560px){
+		.section-view {
+			height: 100vh;
+		}
+	}
+
 </style>

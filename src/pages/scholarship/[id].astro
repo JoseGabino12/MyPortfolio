@@ -1,0 +1,18 @@
+---
+import { ScholarshipInfo } from '../../data/Scholarship'
+import Layout from '../../layouts/Layout.astro';
+import Scholarship from './components/Scholarship';
+
+export async function getStaticPaths() {
+  return [
+    { params: { id: 'udcb' } },
+    { params: { id: 'udcf' } }
+  ];
+}
+
+const { id } = Astro.params;
+const scholarship = ScholarshipInfo.find((scholar) => scholar.id === id);
+---
+<Layout title="My portfolio.">
+  <Scholarship scholarship={scholarship} />
+</Layout>
