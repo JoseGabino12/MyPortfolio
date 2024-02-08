@@ -3,8 +3,8 @@ import Card from './Card'
 
 const Experience = () => {
   return (
-    <section id='experience' className='p-5 sm:p-20 gap-5 flex flex-col items-center section-title'>
-      <h1 className='font-bold text-center text-4xl sm:text-5xl'>Experience</h1>
+    <section id='experience' className='p-5 sm:p-20 gap-5 flex flex-col items-center section-title snap-start'>
+      <h1 className='font-bold text-center text-4xl sm:text-5xl drop-shadow-md'>Experience</h1>
       <ol className='relative border-s border-gray-200 ml-3'>
         {
           experienceData.map((experience, index) => (

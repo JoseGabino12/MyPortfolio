@@ -2,8 +2,8 @@ import { infoContactData } from '../data/Scholarship'
 
 const Contact = () => {
   return (
-    <section id='contact' className='text-center p-5 pb-40 h-screen gap-5 flex flex-col items-center justify-center snap-center section-title'>
-      <h1 className='font-bold text-4xl sm:text-5xl'>Contact me</h1>
+    <section id='contact' className='text-center p-5 pb-40 gap-5 flex flex-col items-center justify-center section-title snap-start'>
+      <h1 className='font-bold text-4xl sm:text-5xl drop-shadow-md'>Contact me</h1>
       <h2>Do you want to contact me? Here are my contact details.</h2>
 
       <div className='flex flex-col sm:flex-row gap-10'>
