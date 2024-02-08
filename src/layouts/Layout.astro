@@ -27,14 +27,12 @@ const { title } = Astro.props;
 <style is:global>
 	.background-main {
 		color: white;
+		background-size: cover;
 		background: linear-gradient(100deg, #cc9ea2 0%, #67254D);
-
-		/* background-color: #282936; */
 	}
 
 	html {
     font-family: "Onest Variable", system-ui, sans-serif;
-    scroll-behavior: smooth;
   }
 
 	.color-span {
@@ -131,9 +129,15 @@ const { title } = Astro.props;
 	}
 
 	.section-title {
+		min-height: 100vh;
+
 		animation: reveal linear both;
 		animation-timeline: view();
 		animation-range: entry 10% cover 20%;
+	}
+
+	.section-view {
+		min-height: 100vh;
 	}
 
 	@keyframes reveal {
@@ -145,18 +149,9 @@ const { title } = Astro.props;
 		}
 	}
 
-	@media screen and (min-width: 1024px){
-		.background-main {
-			height: 100%;
-			color: white;
-			background: linear-gradient(100deg, #cc9ea2 0%, #67254D);
-		}
-	}
-
-	@media screen and (min-width: 2560px){
-		.section-view {
-			height: 100vh;
-		}
+	.transform-glass:hover {
+		transform: scale(1.1); /* Adjust the scale factor as needed */
+		opacity: 0.8; /* Adjust the opacity as needed */
 	}
 
 </style>

@@ -22,3 +22,8 @@ export interface experiencePage {
 export interface scholarshipPage {
   scholarship: infoData | undefined
 }
+
+export interface Section {
+  name: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
