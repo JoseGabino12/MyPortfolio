@@ -9,16 +9,20 @@ const Scholarship = () => {
       <ol className='relative border-s border-gray-200 ml-3'>
         {
           ScholarshipInfo.map((scholarship, index) => (
-            <Card
-              key={index}
-              img={scholarship.img}
-              description={scholarship.description}
-              title={scholarship.title}
-              campus={scholarship.campus}
-              date={scholarship.date}
-              technologies={scholarship.technologies}
-              root={`scholarship/${scholarship.id}`}
-            />
+            <li
+              key={ index }
+              className='animate-fade-in-left [animation-fill-mode:both] test-cards'
+            >
+              <Card
+                img={ scholarship.img }
+                description={ scholarship.description }
+                title={ scholarship.title }
+                campus={ scholarship.campus }
+                date={ scholarship.date }
+                technologies={ scholarship.technologies }
+                root={ `scholarship/${scholarship.id}` }
+              />
+            </li>
           ))
         }
       </ol>

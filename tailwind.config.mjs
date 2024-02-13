@@ -29,12 +29,41 @@ export default {
 					"100%": {
 						"opacity": "1"
 					}
+				},
+				"slide-out-right": {
+					"0%": {
+						"transform": "translateX(0)"
+					},
+					"100%": {
+						"transform": "translateX(20px)"
+					}
+				},
+				"slide-in-right": {
+					"0%": {
+						"transform": "translateX(20px)"
+					},
+					"100%": {
+						"transform": "translateX(0)"
+					}
+				},
+				"fade-in-left": {
+					"0%": {
+						"opacity": "0",
+						"transform": "translateX(20px)"
+					},
+					"100%": {
+						"opacity": "1",
+						"transform": "translateX(0)"
+					}
 				}
 			},
 			animation: {
 				"fade-in-up": "fade-in-up 0.6s ease-out",
 				"slide-in-left": "slide-in-left 0.6s ease-out",
-				"fade-in": "fade-in 0.6s ease-in"
+				"fade-in": "fade-in 0.6s ease-in",
+				"slide-out-right": "slide-out-right 0.6s ease-out",
+				"slide-in-right": "slide-in-right 0.6s ease-out",
+				"fade-in-left": "fade-in-left 0.6s ease-in-out"
 			}
 		}
 	},

@@ -28,16 +28,32 @@ const { title } = Astro.props;
 	.background-main {
 		color: white;
 		background-size: cover;
-		background: linear-gradient(100deg, #cc9ea2 0%, #67254D);
+		background: linear-gradient(45deg, #cc9ea2, #b8808b, #a36273, #8d475c, #67254D);
+		background-size: 400% 400%;
+		animation: colorGradient 40s ease infinite;
 	}
 
 	html {
     font-family: "Onest Variable", system-ui, sans-serif;
   }
 
+	@keyframes colorGradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
 	.color-span {
 		color: white;
 	}
+
+	/* STYLES FOR BUTTON */
 
 	.button-view {
 		position: relative;
@@ -128,6 +144,8 @@ const { title } = Astro.props;
 		margin-left: 40px;
 	}
 
+	/* STYLES FOR SECTION */
+
 	.section-title {
 		min-height: 100vh;
 
@@ -149,9 +167,8 @@ const { title } = Astro.props;
 		}
 	}
 
-	.transform-glass:hover {
-		transform: scale(1.1); /* Adjust the scale factor as needed */
-		opacity: 0.8; /* Adjust the opacity as needed */
+	.test-cards {
+		animation-timeline: view();
+		animation-range: entry 10% cover 20%;
 	}
-
 </style>

@@ -8,16 +8,20 @@ const Experience = () => {
       <ol className='relative border-s border-gray-200 ml-3'>
         {
           experienceData.map((experience, index) => (
-            <Card
-              key={index}
-              img={experience.img}
-              description={experience.description}
-              title={experience.title}
-              campus={experience.campus}
-              date={experience.date}
-              technologies={experience.technologies}
-              root={`experience/${experience.id}`}
-            />
+            <li
+              key={ index }
+              className='animate-fade-in-left [animation-fill-mode:both] test-cards'
+            >
+              <Card
+                img={ experience.img }
+                description={ experience.description }
+                title={ experience.title }
+                campus={ experience.campus }
+                date={ experience.date }
+                technologies={ experience.technologies }
+                root={ `experience/${experience.id}` }
+              />
+            </li>
           ))
         }
       </ol>

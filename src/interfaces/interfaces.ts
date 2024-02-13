@@ -15,12 +15,9 @@ export interface CardProps {
   root: string
 }
 
-export interface experiencePage {
-  experience: infoData | undefined
-}
-
-export interface scholarshipPage {
-  scholarship: infoData | undefined
+export interface singlePage {
+  experience?: infoData | undefined,
+  scholarship?: infoData | undefined,
 }
 
 export interface Section {
