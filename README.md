@@ -11,7 +11,6 @@ Mi portafolio en línea es una colección de proyectos, habilidades y experienci
 ¡Echa un vistazo a algunas capturas de pantalla de mi portafolio!
 
 ![Home](/screenshots/home.png)
-![Education](/screenshots/education.png)
 
 ## Tecnologías Utilizadas
 
@@ -29,4 +28,4 @@ Si encuentras algún error, tienes sugerencias o mejoras, ¡serán bienvenidas! 
 
 ---
 
-¡Gracias por visitar mi repositorio! Si tienes alguna pregunta o simplemente quieres saludar, no dudes en [contactarme](mailto:tucorreo@example.com).
+¡Gracias por visitar mi repositorio! Si tienes alguna pregunta o simplemente quieres saludar, no dudes en [contactarme](mailto:gabinomorales1212@hotmail.com).
