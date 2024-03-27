@@ -5,14 +5,16 @@ import Presentation from '../components/Presentation'
 import Experience from '../components/Experience'
 import Scholarship from '../components/Scholarship'
 import Contact from '../components/Contact'
+import Project from '../components/Projects';
 ---
 
 <Layout title="My portfolio.">
-	<main class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth overflow-hidden">
-		<Nav />
-		<Presentation />
-		<Experience client:visible />
-		<Scholarship />
-		<Contact />
-	</main>
+		<main class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth overflow-hidden">
+			<Nav client:only />
+			<Presentation />
+			<Experience />
+			<Scholarship />
+			<Project />
+			<Contact />
+		</main>
 </Layout>

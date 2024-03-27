@@ -16,8 +16,7 @@ export interface CardProps {
 }
 
 export interface singlePage {
-  experience?: infoData | undefined,
-  scholarship?: infoData | undefined,
+  info: infoData | undefined,
 }
 
 export interface Section {

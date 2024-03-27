@@ -12,45 +12,28 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Discover my portfolio" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="background-main">
-		<slot />
+	<body>
+		<div class="top-0 z-[-2] w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] text-white">
+			<slot />
+		</div>
 	</body>
+
 </html>
 	
 <style is:global>
-	.background-main {
-		color: white;
-		background-size: cover;
-		background: linear-gradient(45deg, #cc9ea2, #b8808b, #a36273, #8d475c, #67254D);
-		background-size: 400% 400%;
-		animation: colorGradient 40s ease infinite;
-	}
-
 	html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-  }
-
-	@keyframes colorGradient {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
+		font-family: "Onest Variable", system-ui, sans-serif;
 	}
 
-	.color-span {
-		color: white;
+	.dark {
+		@apply bg-[#151515];
 	}
 
 	/* STYLES FOR BUTTON */
@@ -158,6 +141,17 @@ const { title } = Astro.props;
 		min-height: 100vh;
 	}
 
+	.color-span {
+		color: white;
+	}
+
+	.card-animation {
+		animation-timeline: view();
+		animation-range: entry 10% cover 20%;
+	}
+
+	/* KEYFRAMES */
+
 	@keyframes reveal {
 		0% {
 			opacity: 0;
@@ -167,8 +161,16 @@ const { title } = Astro.props;
 		}
 	}
 
-	.test-cards {
-		animation-timeline: view();
-		animation-range: entry 10% cover 20%;
+	@keyframes colorGradient {
+		0% {
+    background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
+
 </style>

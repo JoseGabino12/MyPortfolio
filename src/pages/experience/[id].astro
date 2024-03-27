@@ -1,7 +1,7 @@
 ---
 import { experienceData } from '../../data/Scholarship'
 import Layout from '../../layouts/Layout.astro';
-import Experience from './components/Experience';
+import { SectionPageComponent } from '../../components/SectionPageComponent';
 
 export async function getStaticPaths() {
   return [
@@ -15,5 +15,5 @@ const { id } = Astro.params;
 const experience = experienceData.find((exp) => exp.id === id);
 ---
 <Layout title="My portfolio.">
-  <Experience experience={experience} />
+  <SectionPageComponent info={experience} />
 </Layout>

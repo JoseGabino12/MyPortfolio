@@ -7,7 +7,7 @@ import type {
 import type { sectionsInterface } from '../interfaces/interfaces'
 
 import { TfiEmail } from 'react-icons/tfi'
-import { FaUserGraduate, FaGithub, FaLinkedin, FaHome } from 'react-icons/fa'
+import { FaUserGraduate, FaGithub, FaLinkedin, FaHome, FaUserClock } from 'react-icons/fa'
 import { IoIosRocket } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 
@@ -32,6 +32,7 @@ import Brightcoder from '../assets/img/brightcoders.jpeg'
 import Freeway from '../assets/img/freeway.jpeg'
 import Roboyo from '../assets/img/roboyo.png'
 import Udc from '../assets/img/udc.png'
+import Danone from '../assets/img/danone.png'
 
 export const ScholarshipInfo: infoData[] = [
   {
@@ -303,6 +304,30 @@ export const infoContactData: contactData[] = [
   }
 ]
 
+export const projectsData: infoData[] = [{
+  id: 'danone',
+  title: 'Hackathon Danone México',
+  img: Danone.src,
+  campus: 'Virtual - Gather',
+  date: 'Jun 19, 2023',
+  description: 'This project was developed for a Danone hackathon organized by NUEW. The objective was to create a solution that would help the company promote Danone\´s range of ecological and healthy products.',
+  do: [
+    {
+      subtitle: 'Designing and developing a web application',
+      description: 'Designed and developed a web application that allows users to view and purchase Danone products. The application also includes a feature that allows users to track the ecological footprint of their purchases.'
+    },
+    {
+      subtitle: 'Integration with Contentful',
+      description: 'Integrated the application with Contentful, a headless CMS, to manage the content of the application. This integration allows Danone to easily update the content of the application without the need for a developer.'
+    },
+    {
+      subtitle: 'Implementation of modern technologies',
+      description: 'Implemented modern technologies such as Next.js, TypeScript, and Tailwind CSS to create a fast, responsive, and visually appealing web application.'
+    }
+  ],
+  technologies: ['react', 'css', 'js', 'ts', 'git', 'github', 'nextjs']
+}]
+
 export const sections: sectionsInterface[] = [
   {
     name: 'home',
@@ -310,11 +335,15 @@ export const sections: sectionsInterface[] = [
   },
   {
     name: 'experience',
-    icon: IoIosRocket
+    icon: FaUserClock
   },
   {
     name: 'education',
     icon: FaUserGraduate
+  },
+  {
+    name: 'projects',
+    icon: IoIosRocket
   },
   {
     name: 'contact',
