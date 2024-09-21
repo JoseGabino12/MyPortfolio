@@ -6,12 +6,11 @@ export type doData = {
 export type infoData = {
   id: string,
   title: string,
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>,
   img: any,
   campus: string,
   date: string,
   description: string,
-  do: Array<doData>,
-  technologies: Array<string>
 }
 
 export type contactData = {

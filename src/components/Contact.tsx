@@ -2,7 +2,7 @@ import { infoContactData } from '../data/Scholarship'
 
 const Contact = () => {
   return (
-    <section id='contact' className='text-center p-5 pb-40 gap-5 flex flex-col items-center justify-center section-title snap-center snap-always'>
+    <section id='contact' className='text-center p-5 pb-40 gap-5 flex flex-col items-center justify-center min-h-screen'>
       <h1 className='font-bold text-4xl sm:text-5xl drop-shadow-md'>Contact me</h1>
       <h2>Do you want to contact me? Here are my contact details.</h2>
 

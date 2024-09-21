@@ -1,31 +1,28 @@
 import { ScholarshipInfo } from '../data/Scholarship'
-import Card from './Card'
+import CardExperience from './CardExperience'
 
 const Scholarship = () => {
   return (
-    <section id='education' className='p-5 sm:p-20 gap-5 flex flex-col items-center section-title snap-center snap-always'>
+    <section id='education' className='gap-5 flex flex-col'>
       <h1 className='font-bold text-4xl sm:text-5xl drop-shadow-md'>Education</h1>
-
-      <ol className='relative border-s border-gray-200 ml-3'>
+      <p>This is what I have studied.</p>
+      <div className="grid w-auto gap-2">
         {
           ScholarshipInfo.map((scholarship, index) => (
-            <li
-              key={ index }
-              className='animate-fade-in-left [animation-fill-mode:both] card-animation'
-            >
-              <Card
-                img={ scholarship.img }
-                description={ scholarship.description }
-                title={ scholarship.title }
-                campus={ scholarship.campus }
-                date={ scholarship.date }
-                technologies={ scholarship.technologies }
-                root={ `scholarship/${scholarship.id}` }
-              />
-            </li>
+            <CardExperience
+              key={index}
+              img={scholarship.img}
+              campus={scholarship.campus}
+              description={scholarship.description}
+              title={scholarship.title}
+              date={scholarship.date}
+              root={`scholarship/${scholarship.id}`}
+              icon={scholarship.icon}
+              className='w-80 h-40 sm:w-96 sm:h-72'
+            />
           ))
         }
-      </ol>
+      </div>
     </section>
   )
 }

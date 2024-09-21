@@ -1,20 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav';
 import Presentation from '../components/Presentation'
 import Experience from '../components/Experience'
 import Scholarship from '../components/Scholarship'
 import Contact from '../components/Contact'
 import Project from '../components/Projects';
+import CarouselTech from '../components/CarouselTech';
 ---
 
 <Layout title="My portfolio.">
-		<main class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth overflow-hidden">
-			<Nav client:only />
-			<Presentation />
-			<Experience />
-			<Scholarship />
-			<Project />
-			<Contact />
-		</main>
+	<Presentation client:load />
+	<Project />
+
+	<div class="w-full flex flex-col justify-center items-center my-28 gap-5">
+		<h1 class='font-bold text-4xl sm:text-5xl drop-shadow-md'>Technologies</h1>
+		<p class="text-center">These are some of the technologies I have worked with.</p>
+		<CarouselTech client:only='react' />
+	</div>
+
+	<div class="flex gap-20 justify-center items-center flex-col sm:flex-row sm:gap-5">
+		<Scholarship />
+		<Experience />
+	</div>
+	<Contact />
 </Layout>
