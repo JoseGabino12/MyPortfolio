@@ -19,21 +19,23 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="background-main">
+	<body class="dark:bg-[#1A1A1A] bg-white text-black dark:text-white">
 		<slot />
 	</body>
+
+	<footer class="bg-[#F1F0EF] dark:bg-[#2B2B2B] w-full text-center p-4">
+		<p>© 2024 {title}</p>
+	</footer>
 </html>
 	
 <style is:global>
-	.background-main {
-		color: white;
-		background-size: cover;
-		background: linear-gradient(100deg, #cc9ea2 0%, #67254D);
-	}
-
 	html {
     font-family: "Onest Variable", system-ui, sans-serif;
   }
+
+	:root {
+		color-scheme: light dark;
+	}
 
 	.color-span {
 		color: white;
@@ -129,7 +131,7 @@ const { title } = Astro.props;
 	}
 
 	.section-title {
-		min-height: 100vh;
+		min-height: 80vh;
 
 		animation: reveal linear both;
 		animation-timeline: view();
@@ -137,7 +139,7 @@ const { title } = Astro.props;
 	}
 
 	.section-view {
-		min-height: 100vh;
+		/* min-height: ; */
 	}
 
 	@keyframes reveal {

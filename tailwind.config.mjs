@@ -29,14 +29,20 @@ export default {
 					"100%": {
 						"opacity": "1"
 					}
-				}
+				},
+				"infinite-scroll": {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
 			},
 			animation: {
 				"fade-in-up": "fade-in-up 0.6s ease-out",
 				"slide-in-left": "slide-in-left 0.6s ease-out",
-				"fade-in": "fade-in 0.6s ease-in"
+				"fade-in": "fade-in 0.6s ease-in",
+				"infinite-scroll": "infinite-scroll 20s linear infinite",
 			}
 		}
 	},
+	darkMode: 'class',
 	plugins: [],
 }

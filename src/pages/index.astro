@@ -1,18 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav';
+import Nav from '../components/Nav.astro';
 import Presentation from '../components/Presentation'
 import Experience from '../components/Experience'
 import Scholarship from '../components/Scholarship'
 import Contact from '../components/Contact'
+import Carousel from '../components/Carousel'
+import Divider from '../components/Divider'
 ---
 
 <Layout title="My portfolio.">
-	<main class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth overflow-hidden">
-		<Nav />
-		<Presentation />
-		<Experience />
-		<Scholarship />
-		<Contact />
-	</main>
+	<Nav />
+	<Presentation />
+
+	<Divider background='[#F1F0EF]' backgroundDark='#2B2B2B' client:load>
+		<Carousel />
+		<Divider background='white' backgroundDark='#1A1A1A' client:load>
+			<Experience />
+			<Scholarship />
+		</Divider>
+	</Divider>
+	
+	<Contact />
 </Layout>

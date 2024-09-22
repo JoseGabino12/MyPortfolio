@@ -1,0 +1,105 @@
+---
+import '../styles/darkModeButton.css'
+import Modal from './Modal'
+---
+<nav id="main-nav" class='w-full bg-[#F1F0EF] dark:bg-[#2B2B2B]'>
+  <div class='flex justify-around p-10'>
+    <button id='dark-mode-toggle' class="theme__icon">
+      <span></span>
+      <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span></span>
+    </button>
+
+    <ul class='flex gap-2 w-full justify-end text-sm'>
+      <li>
+        <a href='https://www.linkedin.com/in/gabinomorales/' target="_blank">
+          LinkedIn
+        </a>
+      </li>
+      <li>/</li>
+      <li>
+        <a href='https://github.com/JoseGabino12' target="_blank">
+          GitHub
+        </a>
+      </li>
+      <li>/</li>
+      <li>
+        <Modal client:load />
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script is:inline>
+  let remove = null
+  const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
+
+  const getThemePreference = () => {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('theme') ?? 'dark'
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const updateIcon = (themePreference) => {
+    themePreference === 'dark' ? document.getElementById('dark-mode-toggle').classList.add('theme__icon_dark') : document.getElementById('dark-mode-toggle').classList.remove('theme__icon_dark')
+  }
+
+  const updateTheme = () => {
+    if (remove != null) {
+      remove()
+    }
+    matchMedia.addEventListener('change', updateTheme)
+    remove = () => {
+      matchMedia.removeEventListener('change', updateTheme)
+    }
+
+    const themePreference = getThemePreference()
+    const isDark = themePreference === 'dark' || (themePreference === 'system' && matchMedia.matches)
+
+    updateIcon(themePreference)
+    isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')
+  }
+
+  updateTheme()
+
+  document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'light' : 'dark')
+    updateTheme()
+  })
+
+</script>
+
+<style>
+  /* Estilos para el modal y su overlay */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.pdf-container {
+  height: 500px;
+  overflow: auto;
+}
+</style>
