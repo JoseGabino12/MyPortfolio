@@ -1,5 +1,5 @@
-import { ScholarshipInfo } from '../data/Scholarship'
-import Card from './Card'
+import { ScholarshipInfo } from '../../data/Scholarship'
+import Card from '../../components/ui/Card'
 
 const Scholarship = () => {
   return (

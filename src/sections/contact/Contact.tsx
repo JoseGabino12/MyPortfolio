@@ -1,4 +1,4 @@
-import { infoContactData } from '../data/Scholarship'
+import { infoContactData } from '../../data/Scholarship'
 
 const Contact = () => {
   return (

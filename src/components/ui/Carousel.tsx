@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaPython, FaJsSquare } from 'react-icons/fa'; // Puedes agregar tus íconos
-import { technologiesInfo } from '../data/Scholarship'; // Asegúrate de tener los datos correctamente.
+import { technologiesInfo } from '../../data/Scholarship'; // Asegúrate de tener los datos correctamente.
 
 const Carousel = () => {
   return (

@@ -16,6 +16,8 @@
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.0.9",
+    "framer-motion": "^12.16.0",
+    "gsap": "^3.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",

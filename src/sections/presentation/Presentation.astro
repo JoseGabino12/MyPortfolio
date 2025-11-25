@@ -1,0 +1,76 @@
+---
+// Hero.astro
+import RotatingText from '@/components/ui/RotatingText'
+import perfil from '@/assets/img/perfil.jpg'
+import AnimatedContent from '@/components/ui/AnimatedContent'
+import Mocks from '@/sections/presentation/components/Mocks'
+---
+
+<AnimatedContent
+	client:only='react'
+	distance={150}
+	direction='horizontal'
+	reverse={false}
+	duration={1.2}
+	ease='bounce.out'
+	initialOpacity={0.2}
+	animateOpacity
+	scale={1.1}
+	threshold={0.2}
+	delay={0.3}>
+	<section
+		id='home'
+		class='flex lg:flex-row flex-col bg-[#F1F0EF] dark:bg-[#2B2B2B] w-full'>
+		<div class='w-full lg:w-1/2 flex items-center justify-center flex-col'>
+			<div
+				class='text-center sm:text-start gap-10 items-center p-5 flex-col sm:flex-row justify-center flex bg-[#F1F0EF] rounded-b-[80px] sm:rounded-b-[150px] dark:bg-[#2B2B2B]'>
+				<img
+					class='rounded-full w-40 h-40 [animation-fill-mode:both] [animation-delay:200ms] animate-fade-in-up'
+					src={perfil.src}
+					alt='José Gabino Morales González'
+				/>
+			</div>
+
+			<div
+				class='gap-2 text-center font-serif flex flex-col [animation-fill-mode:both] [animation-delay:200ms] animate-fade-in-up'>
+				<h3 class='font-mono font-light italic'>Software Engineer</h3>
+				<h1 class='text-4xl sm:text-5xl drop-shadow-md'>Gabino Morales</h1>
+				<label
+					class='text-2xl md:text-3xl text-[#1A1A1A] font-medium flex gap-2'>
+					crafting experiences that
+					<RotatingText
+						client:load
+						texts={['perform', 'delight', 'scale', 'convert']}
+						staggerFrom={'last'}
+						initial={{ y: '100%' }}
+						animate={{ y: 0 }}
+						exit={{ y: '-120%' }}
+						staggerDuration={0.025}
+						splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
+						transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+						rotationInterval={2000}
+						className='text-black font-bold'
+					/>
+				</label>
+
+				<div class='mt-2'>
+					<button
+						class='px-6 py-2.5 rounded-full bg-black/70 backdrop-blur-md text-white font-medium border border-white/30
+         hover:bg-black/90 transition-all shadow-sm hover:shadow-md'>
+						Contact me
+					</button>
+					<button
+						class='px-6 py-2.5 rounded-full bg-white/70 backdrop-blur-md text-black font-medium border border-white/30
+         hover:bg-white/90 transition-all shadow-sm hover:shadow-md'>
+						Resume
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class='w-full lg:w-1/2 flex items-center lg:items-baseline justify-center overflow-hidden lg:justify-end lg:mr-10 lg:pr-36 lg:max-w-[50vw]'>
+			<Mocks client:load />
+		</div>
+	</section>
+</AnimatedContent>

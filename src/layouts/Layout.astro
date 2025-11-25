@@ -1,37 +1,49 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
+import '../styles/global.css'
 
 interface Props {
-	title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/logo.png" />
-		<meta name="generator" content={Astro.generator} />
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='Astro description'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<link
+			rel='icon'
+			type='image/png'
+			href='/logo.png'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="dark:bg-[#1A1A1A] bg-white text-black dark:text-white">
+	<body class='dark:bg-[#1A1A1A] bg-white text-black dark:text-white'>
 		<slot />
-	</body>
-
-	<footer class="bg-[#F1F0EF] dark:bg-[#2B2B2B] w-full text-center p-4">
+	</body><footer class='bg-[#F1F0EF] dark:bg-[#2B2B2B] w-full text-center p-4'>
 		<p>© 2024 {title}</p>
 	</footer>
 </html>
-	
+
 <style is:global>
 	html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-  }
+		font-family: 'Onest Variable', system-ui, sans-serif;
+	}
 
 	:root {
 		color-scheme: light dark;
@@ -90,7 +102,7 @@ const { title } = Astro.props;
 
 	.button-view.learn-more .circle .icon.arrow::before {
 		position: absolute;
-		content: "";
+		content: '';
 		top: -0.29rem;
 		right: 0.0625rem;
 		width: 0.625rem;
@@ -155,5 +167,4 @@ const { title } = Astro.props;
 		transform: scale(1.1); /* Adjust the scale factor as needed */
 		opacity: 0.8; /* Adjust the opacity as needed */
 	}
-
 </style>

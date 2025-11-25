@@ -1,0 +1,30 @@
+---
+import SkillsFloating from '@/sections/about/components/SkillsFloating.tsx'
+---
+
+<section
+	class='w-full bg-[#F1F0EF] dark:bg-[#2B2B2B] py-20 transition-colors duration-300'>
+	<div
+		class='container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12'>
+		<div class='w-full md:w-1/2 z-10'>
+			<h2
+				class='text-4xl md:text-5xl font-serif font-medium text-[#1A1A1A] dark:text-[#F1F0EF] mb-8'>
+				About Me
+			</h2>
+
+			<p
+				class='text-lg md:text-xl text-[#1A1A1A]/80 dark:text-[#F1F0EF]/80 leading-relaxed font-light'>
+				Passionate software engineer with a focus on development, specializing
+				in frontend engineering. Recently graduated, I have one year of
+				experience as a frontend developer, during which I played a crucial role
+				in designing and implementing innovative technological solutions,
+				demonstrating a strong interest in all aspects of software development.
+			</p>
+		</div>
+
+		<div class='w-full md:w-1/2 h-[400px] md:h-[500px] relative'>
+			<!-- Burbujas flotantes -->
+			<SkillsFloating client:load />
+		</div>
+	</div>
+</section>

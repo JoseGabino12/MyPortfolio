@@ -1,6 +1,6 @@
-import type { CardProps } from '../interfaces/interfaces'
+import type { CardProps } from '../../interfaces/interfaces'
 
-import { technologiesInfo } from '../data/Scholarship'
+import { technologiesInfo } from '../../data/Scholarship'
 import Badge from './Badge'
 
 const Card = ({

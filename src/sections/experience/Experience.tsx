@@ -1,6 +1,6 @@
-import { experienceData } from '../data/Scholarship'
-import Card from './Card'
-import Carousel from './Carousel'
+import { experienceData } from '../../data/Scholarship'
+import Card from '../../components/ui/Card'
+import Carousel from '../../components/ui/Carousel'
 
 const Experience = () => {
   return (
